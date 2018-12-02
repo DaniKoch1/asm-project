@@ -74,9 +74,11 @@ The last step before implementation was a task plan in order to divide getting t
 Daniela	                                          
 1.	Read docs about the RGB light
 2.	Read docs about the clock
+
 Dominika
 1.	Read docs about the buzzer
 2.	Read docs about the distance sensor
+
 Together:
 1. Implement
 2.Test
