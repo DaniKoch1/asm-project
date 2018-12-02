@@ -81,7 +81,7 @@ Dominika
 
 Together:
 1. Implement
-2.Test
+2. Test
 
 ### Implementation
 The implementation can be found in the folder "WithFinalLED".
