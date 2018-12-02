@@ -22,32 +22,59 @@ The following are some non-functional requirements for the project:
 ## Deliveries
 
 ### Problem Formulation
-You are going to define and formulate the problem you want to solve in a problem statement. The project formulation is the product of the first two weeks, so take your time to generate a lot of ideas before deciding. 
+The project’s purpose is to generate different sound pitches basing on the users movement.
+The shorter the distance is, the higher the sound should be. The user creates “music” by increasing and decreasing the distance between a sensor and an object.
+The subproblems are defined as follows:
+1.	How to generate sound?
+2.	How to measure the distance?
+3.	How to update the sound pitch, when the distance is changing?
+4.	How to connect the components to the Arduino board?
 
 ### Project Plan (Analysis, design and test plan)
-* You must analyse the problem and describe it before implementing it. *Use for instance Activity or State Machine diagrams for this purpose.*
+Before implementing the project a use case diagram has been created. Each use case has a use case description. In order to know how the system should work a use case diagram has been created. In order to know the flow between the components, a sequence diagram has been created. All the diargams can be found in folder "Docs" in file "Instrument_Diagrams.asta".
 
-* Make a plan for testing your implementation. The plan should provide details on how to test the individual components or actions of your implementation.
+Moreover a circuit diagram was created. It can be found in folder "Docs" in file "TheInstrument.jpg".
 
-* When you know what to solve and how, split the work into tasks and devide them between group members. *You can use githubs build in issue tracking or any other task tracking system to manage your tasks*
+Afterwards a test plan was formulated.
+
+Test cases:
+1.The system
+No	Description	                                                          LED	                    Buzzer
+1	  User places an obstacle in the range of the sensor	                  LED is on and green	    Sound is generated
+2	  User places an obstacle outside the range of the sensor	              LED is on and red	      Sound is not generated
+3 	User brings the obstacle closer to the sensor (in the range of it)	  LED is on and green	    Sound with a higher sound pitch is                                                                                                     generated
+4	  User brings the obstacle further from the sensor (in the range of it)	LED is on and green	    Sound with a lower sound pitch is                                                                                                       generated
+
+2. The sensor
+No	Description	                                              Output
+1	  User places an obstacle in the range of the sensor	      The RGB LED is on
+2 	User places an obstacle outside the range of the sensor	  The RGB LED is off
+
+3. The buzzer 
+No	Description	                                                            Output
+1	  The delays between turning the buzzer on and off are getting longer	    The sound pitch is getting lower and it is seen on a sound                                                                             wave generator
+2	  The delays between turning the buzzer on and off are getting shorter	  The sound pitch is getting higher and it is seen on a sound                                                                             wave generator
+
+4. Clock
+No	Description	                                Output
+1	  1024 iteration cycles have passed	          The clock output in the debugger window is incremented
+2 	0xFF*1024 (261120) iterations have passed	  The TOV0 flag is set in the debugger window
+
+5. The LED
+No	Description	            Output
+1	  The input is 255,0,0	  The LED is red
+2	  The input is 0,255,0	  The LED is green
+
+Results:
+All the test cases have been tested by the group members and given the expected output.
+
+The last step before implementation was a task plan in order to divide getting the needed knowledge. 
+Daniela	                                          Dominika
+1.	Read docs about the RGB light                 1.	Read docs about the buzzer
+2.	Read docs about the clock	                    2.	Read docs about the distance sensor
+                            3.	Implement together
+                            4.	Test together
+
 
 ### Implementation
-* Implement the project in AVR assembler. 
-* The code must be well-structured and extensively commented, and you should apply software patterns to solve general problems. 
-* The code should be keept under version control in a fork of this git repository.
-
-## Practical Information
-### Definition of Done
-The project should be demonstrated for me on class and your implementation code handed in on github in the form of a pull request. Analysis, design and other relevant material should be documented in the README.md. See section below for details on how to do that.
-
-*All group members should have participated actively in producing code and thus it should be possible to find all group members in the git commit history.*
-
-### Deadline 
-Your implementation should be ready and handed in **before** the first lesson of week 49 (8.20am)
-
-### Github
-Before starting to commit any code, this repository should be forked to the github account of a group member. This forked repository is where you are going to create your Atmel Studio project and commit your assembler code. Eventually you can "Hand in" by creating a pull request. This will enable me to see your code and provide feedback on your project.
-
-The documentation should be written in the README.md on the repository. You can use markdown to format the document ([Markdown cheatsheet here](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf))
-
-If you are unsure of the details, ask me or a fellow student og go watch a video (like this: https://www.youtube.com/watch?v=_NrSWLQsDL4) or read the documentation.
+The implementation can be found in the folder "WithFinalLED".
