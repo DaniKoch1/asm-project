@@ -70,12 +70,16 @@ Results:
 All the test cases have been tested by the group members and given the expected output.
 
 The last step before implementation was a task plan in order to divide getting the needed knowledge. 
-Daniela	                                          Dominika
-1.	Read docs about the RGB light                 1.	Read docs about the buzzer
-2.	Read docs about the clock	                    2.	Read docs about the distance sensor
-                            3.	Implement together
-                            4.	Test together
 
+Daniela	                                          
+1.	Read docs about the RGB light
+2.	Read docs about the clock
+Dominika
+1.	Read docs about the buzzer
+2.	Read docs about the distance sensor
+Together:
+1. Implement
+2.Test
 
 ### Implementation
 The implementation can be found in the folder "WithFinalLED".
