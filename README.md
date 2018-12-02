@@ -38,6 +38,7 @@ Moreover a circuit diagram was created. It can be found in folder "Docs" in file
 Afterwards a test plan was formulated.
 
 Test cases:
+
 1.The system
 No	Description	                                                          LED	                    Buzzer
 1	  User places an obstacle in the range of the sensor	                  LED is on and green	    Sound is generated
