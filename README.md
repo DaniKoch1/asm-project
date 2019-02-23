@@ -84,4 +84,4 @@ Together:
 2. Test
 
 ### Implementation
-The implementation can be found in the folder "WithFinalLED".
+The implementation can be found in the folder "FinalWithLED".
